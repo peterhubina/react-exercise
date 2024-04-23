@@ -14,6 +14,9 @@ const App = () => {
   const appVersion = queryParams.get("appversion");
   const os = queryParams.get("os");
 
+  // Only render screens if appVersion and os are present
+  const shouldRenderScreens = appVersion && os;
+
   /* Function to check if the app version is outdated */
   const isUpdateRequired = () => {
     /* If the OS is Windows */
@@ -39,7 +42,8 @@ const App = () => {
   return (
     <div className="App">
       {/* conditionally render screens */}
-      {isUpdateRequired() ? <UpdateRequiredScreen /> : <WelcomeScreen />}
+      {shouldRenderScreens &&
+        (isUpdateRequired() ? <UpdateRequiredScreen /> : <WelcomeScreen />)}
       <Footer />
     </div>
   );

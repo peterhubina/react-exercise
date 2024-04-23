@@ -1,7 +1,8 @@
 import React from "react";
 
 const WelcomeScreen = () => (
-  <div className="welcome-screen">
+  /* Render WelcomeScreen */
+  <div className="variable-screen">
     <button>Getting started</button>
   </div>
 );

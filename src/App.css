@@ -5,7 +5,7 @@
   justify-content: space-between;
 }
 
-.welcome-screen {
+.variable-screen {
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -14,4 +14,5 @@
 
 footer {
   text-align: center;
+  margin-top: auto;
 }
